@@ -18,7 +18,7 @@ function convertToString(n) {
 }
 
 // Function Expression
-let convertToString1 = function(n) {
+let convertToString1 = function (n) {
   return String(n);
 };
 
@@ -43,11 +43,43 @@ convertToString(21); // "21"
  * @return {number}
  */
 
+function addOne(n) {
+  return n + 1;
+}
+
+let addOne1 = function addOne(n) {
+  return n + 1;
+}
+
+let addOne1 = n => addOne(n);
+
+let addOne1 = n => {
+  return n + 1;
+}
+
+addOne(2);
+
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
+
+function minusOne(n) {
+  return n - 1;
+}
+
+let minusOne1 = function minusOne(n) {
+  return n + 1;
+}
+
+let minusOne1 = n => minusOne(n);
+
+let minusOne1 = n => {
+  return n + 1;
+}
+
+minusOne(3);
 
 /**
  * Adds two numbers.
@@ -56,12 +88,45 @@ convertToString(21); // "21"
  * @return {number} the sum
  */
 
+function addTwo(x, y) {
+  return x + y;
+}
+
+let addTwo1 = function addTwo(x, y) {
+  return x + y;
+}
+
+let addTwo1 = (x, y) => addTwo(x + y);
+
+let addTwo1 = (x, y) => {
+  return x + y;
+}
+
+addTwo(2, 3);
+
+
 /**
  * Subtracts the second number from the first.
  * @param {number} x
  * @param {number} y
  * @return {number} the difference
  */
+
+function subTwo(x, y) {
+  return y - x;
+}
+
+let subTwo1 = function subTwo(x, y) {
+  return y - x;
+}
+
+let subTwo1 = (y, x) => subTwo(y - x);
+
+let subTwo1 = (y, x) => {
+  return y - x;
+}
+
+subTwo(2, 3);
 
 /**
  * Multiplies two numbers.
@@ -70,6 +135,21 @@ convertToString(21); // "21"
  * @return {number} the product
  */
 
+function multiply(x, y) {
+  return Number(x * y);
+}
+
+let multiply = function (x, y) {
+  return Number(x * y);
+}
+
+let multiply = (x, y) => Number(x * y);
+
+let multiply = (x, y) => {
+  return Number(x * y);
+}
+multiply(1, 2);
+
 /**
  * Divides the first number by the second.
  * @param {number} x
@@ -77,11 +157,43 @@ convertToString(21); // "21"
  * @return {number} the quotient
  */
 
+function division(x, y) {
+  return Number(x / y);
+}
+
+let division = function (x, y) {
+  return Number(x / y);
+}
+
+let division = (x, y) => Number(x / y);
+
+
+let division = (x, y) => {
+  return Number(x / y);
+}
+divide(2, 4);
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
  * @return {number} squared
  */
+
+function square(x) {
+  return Number(x ** 2);
+}
+
+let square = function (x) {
+  return Number(x ** 2);
+}
+
+let square = n => Number(x ** 2);
+
+
+let square = (x) => {
+  return Number(x ** 2);
+}
+square(3);
+
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -91,6 +203,23 @@ convertToString(21); // "21"
  * @param {number} y
  * @return {number} the result
  */
+
+let operation = (operation, x, y) => {
+  switch (operation) {
+    case "add":
+      console.log(`${x} + ${y} = ${x + y}`);
+      break;
+    case "subtract":
+      console.log(`${x} - ${y} = ${x - y}`);
+      break;
+    case "multiply":
+      console.log(`${x} * ${y} = ${x * y}`);
+      break;
+    case "divide":
+      console.log(`${x} / ${y} = ${x / y}`);
+      break;
+  }
+}
 
 /**
  * Returns true if `a` is greater than `b`.
