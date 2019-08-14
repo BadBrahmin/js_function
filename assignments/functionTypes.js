@@ -228,6 +228,26 @@ let operation = (operation, x, y) => {
  * @return {boolean} `a` is larger than `b`
  */
 
+function isAgreater(a, b) {
+  if (Number(a) > Number(b)) {
+    return true;
+  }
+}
+
+let isAgreater = function (a, b) {
+  if (Number(a) > Number(b)) {
+    return true;
+  }
+}
+
+let isAgreater = (a, b) => {
+  if (Number(a) > Number(b)) {
+    return true;
+  }
+}
+
+isAgreater(1, 2);
+
 /**
  * Returns true if `a` is less than `b`.
  * @param {number} a
@@ -235,6 +255,24 @@ let operation = (operation, x, y) => {
  * @return {boolean} `a` is smaller than `b`
  */
 
+function isASmaller(a, b) {
+  if (Number(a) < Number(b)) {
+    return true;
+  }
+}
+
+let isASmaller = function (a, b) {
+  if (Number(a) < Number(b)) {
+    return true;
+  }
+}
+
+let isASmaller = (a, b) => {
+  if (Number(a) < Number(b)) {
+    return true;
+  }
+}
+isASmaller(1, 2);
 /**
  * Returns true if `a` and `b` are equal.
  * @param {number} a
@@ -242,12 +280,45 @@ let operation = (operation, x, y) => {
  * @return {boolean} the numbers are equal
  */
 
+function isEquall(a, b) {
+  if (Number(a) == Number(b)) {
+    return true;
+  }
+}
+
+let isEquall = function (a, b) {
+  if (Number(a) == Number(b)) {
+    return true;
+  }
+};
+
+let isEquall = (a, b) => {
+  if (Number(a) == Number(b)) {
+    return true;
+  }
+}
+isEquall(2, 2);
 /**
  * Returns the smallest value of two numbers.
  * @param {number} x
  * @param {number} y
  * @return {number} the smallest number
  */
+
+function smallest(x, y) {
+  return Math.min(x, y);
+}
+
+let smallest = function (x, y) {
+  return Math.min(x, y);
+}
+
+let smallest = (x, y) => Math.min(x, y);
+
+let smallest = (x, y) => {
+  return Math.min(x, y);
+}
+smallest(1, 2);
 
 /**
  * Returns the largest value of two numbers.
@@ -256,11 +327,40 @@ let operation = (operation, x, y) => {
  * @return {number} the largest number
  */
 
+function greater(x, y) {
+  return Math.max(x, y);
+}
+
+let greater = function (x, y) {
+  return Math.min(x, y);
+}
+
+let greater = (x, y) => Math.max(x, y);
+
+let greater = (x, y) => {
+  return Math.min(x, y);
+}
+greater(9, 6);
 /**
  * Returns true if `n` is even.
  * @param {number} n
  * @return {boolean} the number is even
  */
+
+function even(n) {
+  return n % 2 ? false : true;
+}
+
+let even = function (n) {
+  return n % 2 ? false : true;
+}
+
+let even = n => n % 2 ? false : true;
+
+let even = n => {
+  return n % 2 ? false : true;
+}
+even(4);
 
 /**
  * Returns true if `n` is odd.
@@ -268,6 +368,20 @@ let operation = (operation, x, y) => {
  * @return {boolean} the number is odd
  */
 
+function odd(n) {
+  return n % 2 ? true : false;
+}
+
+let odd = function (n) {
+  return n % 2 ? true : false;
+}
+
+let odd = n => n % 2 ? true : false;
+
+let odd = n => {
+  return n % 2 ? true : false;
+}
+odd(4);
 /**
  * Returns a letter grade.
  * "A": 90-100%
@@ -280,9 +394,70 @@ let operation = (operation, x, y) => {
  * @return {string} the score represented as a letter grade
  */
 
+
+function grade(score) {
+  if (score >= 90 && score < 100) {
+    return "A";
+  } else if (score >= 80 && score < 90) {
+    return "B";
+  } else if (score >= 70 && score < 80) {
+    return "C";
+  } else if (score >= 60 && score < 70) {
+    return "D"
+  } else if (score >= 50 && score < 60) {
+    return "F"
+  }
+}
+
+let grade = function (score) {
+  if (score >= 90 && score < 100) {
+    return "A";
+  } else if (score >= 80 && score < 90) {
+    return "B";
+  } else if (score >= 70 && score < 80) {
+    return "C";
+  } else if (score >= 60 && score < 70) {
+    return "D"
+  } else if (score >= 50 && score < 60) {
+    return "F"
+  }
+}
+
+
+let grade = (score) => {
+  if (score >= 90 && score < 100) {
+    return "A";
+  } else if (score >= 80 && score < 90) {
+    return "B";
+  } else if (score >= 70 && score < 80) {
+    return "C";
+  } else if (score >= 60 && score < 70) {
+    return "D"
+  } else if (score >= 50 && score < 60) {
+    return "F"
+  }
+}
+grade(83);
+
 /**
  * Joins two strings with a space.
  * @param {string} word1
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+
+
+function addString(word1, word2) {
+  return `${word1} ${word2}`;
+}
+
+let addString = function (word1, word2) {
+  return `${word1} ${word2}`;
+}
+
+let addString = (word1, word2) => `${word1} ${word2}`;
+
+let addString = (word1, word2) => {
+  return `${word1} ${word2}`;
+}
+addString("Function ", "Types");
